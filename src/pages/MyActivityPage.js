@@ -8,6 +8,7 @@ export default function MyActivityPage() {
   return (
     <Layout>
       <h1>My activity page</h1>
+      <h3>Redux Demo</h3>
       {currentSong ? (
         <h4>You're playing episode - {currentSong}</h4>
       ) : (
