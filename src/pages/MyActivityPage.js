@@ -4,7 +4,13 @@ import Layout from '../components/layout';
 import { useSelector } from 'react-redux';
 
 export default function MyActivityPage() {
-  const currentSong = useSelector((state) => state.currentSong);
+  let currentSong = useSelector((state) => state.currentSong);
+  if (!currentSong) {
+    currentSong = localStorage.getItem('nowPlaying');
+  } else {
+    localStorage.setItem('nowPlaying', currentSong);
+  }
+
   return (
     <Layout>
       <h1>My activity page</h1>

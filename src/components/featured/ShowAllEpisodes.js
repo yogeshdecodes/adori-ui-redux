@@ -8,7 +8,12 @@ import { useSelector } from 'react-redux';
 
 export default function ShowAllEpisodes() {
   const posts = useSelector((state) => state.posts);
-  const currentSong = useSelector((state) => state.currentSong);
+  let currentSong = useSelector((state) => state.currentSong);
+  if (!currentSong) {
+    currentSong = localStorage.getItem('nowPlaying');
+  } else {
+    localStorage.setItem('nowPlaying', currentSong);
+  }
 
   return (
     <div className="mainContainer">
