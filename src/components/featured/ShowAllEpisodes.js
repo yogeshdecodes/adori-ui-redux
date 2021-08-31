@@ -9,11 +9,11 @@ import { useSelector } from 'react-redux';
 export default function ShowAllEpisodes() {
   const posts = useSelector((state) => state.posts);
   let currentSong = useSelector((state) => state.currentSong);
-  if (!currentSong) {
-    currentSong = localStorage.getItem('nowPlaying');
-  } else {
-    localStorage.setItem('nowPlaying', currentSong);
-  }
+  // if (!currentSong) {
+  //   currentSong = localStorage.getItem('nowPlaying');
+  // } else {
+  //   localStorage.setItem('nowPlaying', currentSong);
+  // }
 
   return (
     <div className="mainContainer">
@@ -32,6 +32,7 @@ export default function ShowAllEpisodes() {
             })}
           </section>
           <h3>Redux Demo</h3>
+          <p>Change page and see how state is maintained across app.</p>
           {currentSong ? (
             <h4>You're playing episode - {currentSong}</h4>
           ) : (

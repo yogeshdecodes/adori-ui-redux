@@ -23,7 +23,6 @@ html.dark-mode img {
 }
 
 header.wrapper {
-  /* position: sticky; creating flickering issue*/
   position: fixed;
   top: 0;
   left: 0;
@@ -102,7 +101,6 @@ footer.wrapper {
 }
 
 .mainContainer {
-  /* display: grid; */
   margin: 24px auto;
   min-height: 70vh;
   width: 100%;
@@ -119,8 +117,6 @@ footer.wrapper {
 }
 
 .show-info-grid {
-  /* display: grid; */
-  /* grid-template-columns: 3fr 3fr; */
   display: flex;
   gap: 40px;
   align-items: center;
@@ -257,7 +253,6 @@ footer.wrapper {
   }
 
   .show-info-grid {
-    /* grid-template-columns: 1fr; */
     flex-direction: column;
     align-items: flex-start;
   }
