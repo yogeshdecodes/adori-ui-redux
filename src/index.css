@@ -22,8 +22,10 @@ html.dark-mode img {
   filter: invert(1) hue-rotate(180deg) brightness(2) contrast(0.8);
 }
 html.dark-mode .play-icon span,
-.showSubscribeButton button,
 .react-switch-bg {
+  filter: invert(1) hue-rotate(180deg);
+}
+html.dark-mode .showSubscribeButton button {
   filter: invert(1) hue-rotate(180deg);
 }
 
